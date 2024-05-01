@@ -5,7 +5,7 @@ from surprise import Reader, Dataset
 from surprise.model_selection import cross_validate
 
 # IMPORT DATA
-rating = pd.read_csv('./training.txt', names = ['u', 'i', 'r'], sep = ',', header = None)
+rating = pd.read_csv('./training.txt', names = ['u', 'i', 'r'], sep = ',', header = None) #file path
 reader = Reader(rating_scale = (0, 5))
 training = Dataset.load_from_df(rating, reader)
 #data = Dataset.load_builtin(rating, reader)
